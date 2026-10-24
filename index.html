@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">Our Story <span>♡</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#memories">Memories</a>
+      <a href="#letter">Letter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A little scrapbook of</p>
+        <h1>You &amp; Me<span class="title-heart">♥</span></h1>
+        <p class="intro">Hindi lang ito koleksiyon ng mga larawan,<br>
+          kundi kuwento ng dalawang taong<br>
+          patuloy na pinipili ang isa't isa.</p>
+        <p class="forever">—  Forever  —</p>
+      </div>
+
+      <button class="hero-photo photo-card" data-photo="0" aria-label="Buksan ang paboritong larawan">
+        <span class="tape"></span>
+        <img src="images/memory1.png" alt="Dalawang taong magkasama sa isang magandang sandali">
+        <span class="handwritten">Ikaw pa rin, sa bawat bukas. ♡</span>
+      </button>
+
+      <aside class="tiny-note">
+        <span class="note-heart">♡</span>
+        <p>Salamat sa pagiging<br>paborito kong tao<br>sa mundong ito.</p>
+      </aside>
+    </section>
+
+    <section class="memories-section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">Little moments, big feelings</p>
+        <h2>Our Memories</h2>
+        <span class="heading-flourish">— ♥ —</span>
+      </div>
+
+      <div class="memory-grid">
+        <button class="memory-card" data-photo="0">
+          <span class="photo-wrap"><img src="images/memory1.png" alt="Memory: unang date"></span>
+          <span class="memory-title">Our First Date</span>
+          <span class="memory-date">April 12, 2024</span>
+          <span class="memory-caption">Kinakabahan, pero masaya. ♡</span>
+        </button>
+
+        <button class="memory-card" data-photo="1">
+          <span class="photo-wrap"><img src="images/memory2.png" alt="Memory: unang biyahe"></span>
+          <span class="memory-title">Little Adventure</span>
+          <span class="memory-date">June 15, 2024</span>
+          <span class="memory-caption">Mas maganda ang lugar kapag kasama ka.</span>
+        </button>
+
+        <button class="memory-card" data-photo="2">
+          <span class="photo-wrap"><img src="images/memory3.png" alt="Memory: sunset"></span>
+          <span class="memory-title">Golden Hour</span>
+          <span class="memory-date">August 3, 2024</span>
+          <span class="memory-caption">Gusto kong ulitin ang araw na ito.</span>
+        </button>
+
+        <button class="memory-card" data-photo="3">
+          <span class="photo-wrap"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=85" alt="Memory: bulaklak"></span>
+          <span class="memory-title">A Little Surprise</span>
+          <span class="memory-date">September 21, 2024</span>
+          <span class="memory-caption">Maliit na bagay, malaking saya.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="letter-section" id="letter">
+      <div class="letter-decoration" aria-hidden="true">♡</div>
+      <p class="eyebrow">A few words from my heart</p>
+      <h2>A Letter for You</h2>
+      <p class="letter-preview">“Sa dami ng nangyayari sa mundo,<br>ikaw ang pahinga na hinahanap ko.”</p>
+      <button class="primary-button" id="openLetter">Buksan ang sulat</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with <span>♥</span> and a little bit of forever.</p>
+  </footer>
+
+  <!-- Modal para sa larawan -->
+  <div class="modal" id="imageModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Memory photo">
+    <button class="modal-close" data-close="imageModal" aria-label="Isara">×</button>
+    <button class="modal-arrow prev" id="prevPhoto" aria-label="Nakaraang larawan">‹</button>
+    <figure>
+      <img id="modalImage" src="" alt="">
+      <figcaption id="modalCaption"></figcaption>
+      <p class="photo-count" id="photoCount"></p>
+    </figure>
+    <button class="modal-arrow next" id="nextPhoto" aria-label="Susunod na larawan">›</button>
+  </div>
+
+  <!-- Modal para sa love letter -->
+  <div class="modal letter-modal" id="letterModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+    <button class="modal-close" data-close="letterModal" aria-label="Isara">×</button>
+    <article class="letter-paper">
+      <p class="eyebrow">Para sa paborito kong tao</p>
+      <h2 id="letterTitle">Dear, Hon ♡</h2>
+      <p>Hindi man perpekto ang bawat araw, nagpapasalamat ako dahil kasama kita sa pagharap sa mga iyon.</p>
+      <p>Salamat sa maliliit na bagay, sa mga tawanan, sa pakikinig, at sa mga sandaling kahit walang ginagawa ay sapat na dahil magkasama tayo.</p>
+      <p>Sana sa bawat bagong memory na idagdag natin dito, maalala mong pinipili kita — hindi lang sa masasayang araw, kundi pati sa mga araw na kailangan natin ng mas mahabang pasensya at pag-unawa.</p>
+      <p class="signature">Palagi, ako. ♡</p>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
